@@ -74,6 +74,12 @@ public class LonelyTwitterActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+        ABC mood1 = new HappyMood("");
+        ABC mood2 = new SadMood("");
+
+        ArrayList<ABC> moodList = new ArrayList<ABC>();
+        moodList.add(mood1);
+        moodList.add(mood2);
 		return tweets.toArray(new String[tweets.size()]);
 	}
 	
@@ -91,5 +97,6 @@ public class LonelyTwitterActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 }
