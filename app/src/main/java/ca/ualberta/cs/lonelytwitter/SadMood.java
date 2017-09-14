@@ -17,14 +17,6 @@ public class SadMood extends ABC {
         super(mood, date);
     }
 
-    public Date getDate(){
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     @Override
     public String CurrentMood() {
         return "Sad";
