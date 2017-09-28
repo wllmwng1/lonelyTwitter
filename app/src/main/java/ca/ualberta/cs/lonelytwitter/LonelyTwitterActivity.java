@@ -65,8 +65,8 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				tweets.clear();
-				adapter.notifyDataSetChanged();
-				saveInFile();
+				//adapter.notifyDataSetChanged();
+				//saveInFile();
 			}
 		});
 	}
@@ -82,6 +82,11 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList.setAdapter(adapter);
 	}
 
+	/**
+	 * Loads the previous Tweets from before when opening app or updating.
+	 *
+	 * @exception RuntimeException
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -106,7 +111,12 @@ public class LonelyTwitterActivity extends Activity {
 //        moodList.add(mood2);
 		//return tweets.toArray(new String[tweets.size()]);
 	}
-	
+
+	/**
+	 * Saves the new Tweet into the List and updates it.
+	 *
+	 * @exception RuntimeException
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
