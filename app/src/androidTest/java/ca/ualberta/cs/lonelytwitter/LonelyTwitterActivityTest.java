@@ -6,7 +6,7 @@ import android.widget.EditText;
 
 import com.robotium.solo.Solo;
 
-import junit.framework.TestCase;
+//removed junit.framework.TestCase, unused import
 
 public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2 {
     private Solo solo;
@@ -20,11 +20,12 @@ public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2 
     }
     /**
     * Runs at the beginning of the tests
-    * @throws Exception
+    * @throws Exception - if Solo is invalid throw exception
     */
+    // added throws tag description, so developers understand why
     public void testStart() throws Exception {
-        Activity activity = getActivity();
-
+        //Activity activity = getActivity();
+        //Removed variable activity because it is never used
     }
 
     public void testTweet() {
@@ -52,8 +53,9 @@ public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2 
     }
      /**
      * Runs at the end of tests
-     * @throws Exception
+     * @throws Exception - if tests fail throw exception
      */
+     //Added throw tag description, so developers understand why
     @Override
     public void tearDown() throws Exception{
         solo.finishOpenedActivities();
